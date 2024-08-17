@@ -1,0 +1,12 @@
+.education {
+    background-color: white;
+    box-shadow: 5px 5px 5px 5px rgb(15, 231, 12);
+    min-height: 100px;
+    margin: 15px;
+}
+li{
+    font-size: 13px;
+}
+.contact{
+    list-style: none;
+}

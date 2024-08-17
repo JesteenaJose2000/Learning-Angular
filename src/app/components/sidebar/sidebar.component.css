@@ -1,0 +1,47 @@
+.wrapper {
+    background-color: rgb(143, 228, 142);
+    padding: 20px;
+}
+
+.para1 {
+    font-weight: bold;
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 0px;
+}
+
+.para2 {
+    text-align: center;
+    color: rgb(252, 2, 2);
+    font-weight: bold;
+    font-size: 13px;
+    margin-top: 0px;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(238, 157, 36);
+    font-size: 55px;
+    margin: 0px;
+}
+
+.para3 {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    margin: 0px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.details {
+    padding: 15px;
+    background-color: rgb(247, 170, 99);
+    font-size: 14px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.para4 {
+    margin: 2px;
+}

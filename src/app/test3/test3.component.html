@@ -1,0 +1,47 @@
+<div class="container">
+    <h1>Angular pipes</h1><br>
+    <h2>{{name}}</h2>
+    <h2>{{name | lowercase}}</h2>
+    <h2>{{name | uppercase}}</h2>
+    <h2>{{name | titlecase}}</h2>
+    <br><br>
+    <h2>{{person | json}}</h2>
+    <h2>{{person.name}}</h2>
+    <br>
+    <h2>{{ 1.234 | number: '1.2-3' }}</h2>
+    <h2>{{ 1.234 | number: '3.4-5' }}</h2>
+    <h2>{{ 1.234 | number: '1.1-2' }}</h2>
+    <br>
+    <h2>{{ currentDate }}</h2>
+    <h2>{{ currentDate | date:'short' }}</h2>
+    <h2>{{ currentDate |date : 'shortDate' }}</h2>
+    <h2>{{ currentDate | date: 'shortTime'}}</h2>
+    <h2>{{ currentDate | date:'medium' }}</h2>
+    <br>
+    <h2>{{100000 | currency}}</h2>
+    <h2>{{100000 | currency:'INR':'code'}}</h2>
+    <h2>{{100000 | currency:'GBP'}}</h2>
+    <br><br><br>
+
+    <h2>Employee table</h2>
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Gender</th>
+                <th>Salary</th>
+                <th>DateOfBirthh</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees">
+                <td>{{employee.code |uppercase}}</td>
+                <td>{{employee.name | titlecase |empTitle : employee.gender}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.salary | currency:'INR'}}</td>
+                <td>{{employee.dob | date}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

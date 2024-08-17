@@ -1,0 +1,22 @@
+<div class="container">
+    <h1>Buy Products</h1>
+    <div class="row row-cols-1 row-cols-md-4">
+        <div class="col mb-4" *ngFor="let product of categories" style="width: 18rem;">
+            <div class="card h-100 " style="width: 18rem;">
+                <div class="container2">
+                    <img src={{product.image}} class="card-img-top image" alt="..." width="300px" height="300px">
+                    <div class="middle">
+                        <button class="btn btn-secondary">Buy now</button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{product.catName}}</h5>
+                    <h6>Price : {{product.price |currency }}</h6>
+                    <h6>Rating : {{product.rating.rate}}</h6>
+                    <p class="card-text">{{product.description}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

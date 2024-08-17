@@ -1,0 +1,16 @@
+<div class="container">
+  <div>
+    <label>Enter an Input: </label>
+    <input
+      type="number"
+      name="number"
+      value="number"
+      #myInput
+      [formControl]="number"
+    />
+  </div>
+  <div appHighlight [propertyFormControl]="number" [divisibleByNum]="5">
+    {{ number.value }}
+  </div>
+  <button routerLink="/employee">click me</button>
+</div>

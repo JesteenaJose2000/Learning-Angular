@@ -1,0 +1,83 @@
+<div class="container">
+    <h1>ngIf</h1>
+
+    <h1 *ngIf="true">hello world</h1>
+    <h1 *ngIf="display">hello world</h1>
+
+    <div *ngIf="display; then thenBlock else elseBlock"></div>
+
+    <ng-template #thenBlock>
+        <p>hello i am from if</p>
+    </ng-template>
+
+    <ng-template #elseBlock>
+        <p>hello i am from else</p>
+    </ng-template>
+
+    <button class="btn btn-primary" *ngIf="!isloggedin">login</button>
+    <button class="btn btn-danger" *ngIf="isloggedin">logout</button>
+
+    <hr>
+    <hr>
+
+    <h1>ngSwitch</h1>
+    <div [ngSwitch]="number">
+        <h1 *ngSwitchCase="1">one</h1>
+        <h1 *ngSwitchCase="2">Two</h1>
+        <h1 *ngSwitchCase="3">Three</h1>
+        <h1 *ngSwitchDefault>not a valid number</h1>
+    </div>
+
+    <div [ngSwitch]="numberstring">
+        <h1 *ngSwitchCase="'One'">1</h1>
+        <h1 *ngSwitchCase="'Two'">2</h1>
+        <h1 *ngSwitchCase="'Three'">3</h1>
+        <h1 *ngSwitchDefault>not a valid number</h1>
+    </div>
+    <hr>
+    <hr>
+    <h1>ngFor</h1>
+    <ul>
+        <li *ngFor="let name of names">{{name}}</li>
+    </ul>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let employee of employees;index as i;first as f;last as l;even as e;odd as o"
+            [style.background]="e? '#ccc':'#fff'">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr><hr>
+    <h1>ngfor has a problem as it will recreate the entire table again and again so use trackby</h1>
+
+    <table class="table table-bordered">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+            </tr>
+        </thead>
+        <tbody >
+            <tr *ngFor="let employee of employees;trackBy:trackById">
+                <td>{{employee.id}}</td>
+                <td>{{employee.name}}</td>
+                <td>{{employee.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button class="btn btn-primary" (click)="onrefreshing()">refresh</button>
+</div>

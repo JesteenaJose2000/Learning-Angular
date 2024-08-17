@@ -1,0 +1,25 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.success {
+  background-color: green;
+}
+.danger {
+  background-color: red;
+}
+.warning {
+  background-color: yellow;
+}
+
+.wrapper {
+  height: 50px;
+  width: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
